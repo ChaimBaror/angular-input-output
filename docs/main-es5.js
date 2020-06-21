@@ -268,6 +268,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.clickcolor = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.itmedelete = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.isboss = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
       }
 
       _createClass(JItmeComponent, [{
@@ -291,6 +292,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function clickDelete(id) {
           this.itmedelete.emit(id);
         }
+      }, {
+        key: "clickboss",
+        value: function clickboss(id) {
+          this.isboss.emit(id);
+        }
       }]);
 
       return JItmeComponent;
@@ -308,11 +314,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       outputs: {
         clickcolor: "clickcolor",
-        itmedelete: "itmedelete"
+        itmedelete: "itmedelete",
+        isboss: "isboss"
       },
-      decls: 14,
-      vars: 5,
-      consts: [[2, "text-align", "center", "border", "coral 2px solid"], [3, "click"], ["coloes", ""]],
+      decls: 16,
+      vars: 9,
+      consts: [[3, "click"], ["coloes", ""]],
       template: function JItmeComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
@@ -321,7 +328,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "h2");
 
@@ -335,7 +342,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "button", 1, 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "button", 0, 1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function JItmeComponent_Template_button_click_7_listener() {
             return ctx.clickItme(ctx.jiraff.color);
@@ -345,17 +352,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "br");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "button", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "br");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function JItmeComponent_Template_button_click_10_listener() {
+            return ctx.clickboss(ctx.jiraff.id);
+          });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "button", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function JItmeComponent_Template_button_click_12_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "button", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function JItmeComponent_Template_button_click_14_listener() {
             return ctx.clickDelete(ctx.jiraff.id);
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "delete");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "delete");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -365,7 +382,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         if (rf & 2) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"]("j-itme" + (ctx.jiraff.isBossy ? " bossy" : ""));
+
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("background", ctx.bak, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefaultStyleSanitizer"]);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵattribute"]("jid", ctx.jiraff.id);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
@@ -377,10 +398,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.jiraff.color);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("this color : ", ctx.jiraff.color, "");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("is Bossy : ", ctx.jiraff.isBossy, "");
         }
       },
-      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBzL09JLUZNL2otaXRtZS9qLWl0bWUuY29tcG9uZW50LmNzcyJ9 */"]
+      styles: [".j-itme[_ngcontent-%COMP%]{\r\n     text-align: center ;\r\n     border: coral 2px solid\r\n }\r\n\r\n .j-itme.bossy[_ngcontent-%COMP%]{\r\n    text-align: center ;\r\n    \r\n    border: coral 10px solid\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcHMvT0ktRk0vai1pdG1lL2otaXRtZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0NBRUM7eURBQ3dEOztDQUV4RDtLQUNJLG1CQUFtQjtLQUNuQjtDQUNKOztDQUVBO0lBQ0csbUJBQW1COztJQUVuQjtBQUNKIiwiZmlsZSI6InNyYy9hcHAvY29tcHMvT0ktRk0vai1pdG1lL2otaXRtZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcblxyXG4gLyogW2NsYXNzXT1cIidqLWl0bWUnICsgKGppcmFmZi5pc0Jvc3N5ID8gJ2Jvc3N5JyA6ICcnKVwiXHJcbiBzdHlsZT0gXCJ0ZXh0LWFsaWduOiBjZW50ZXIgO2JvcmRlcjogY29yYWwgMnB4IHNvbGlkIDtcIiAqL1xyXG5cclxuIC5qLWl0bWV7XHJcbiAgICAgdGV4dC1hbGlnbjogY2VudGVyIDtcclxuICAgICBib3JkZXI6IGNvcmFsIDJweCBzb2xpZFxyXG4gfVxyXG5cclxuIC5qLWl0bWUuYm9zc3l7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXIgO1xyXG4gICAgXHJcbiAgICBib3JkZXI6IGNvcmFsIDEwcHggc29saWRcclxufSJdfQ== */"]
     });
     /*@__PURE__*/
 
@@ -402,6 +427,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }],
         itmedelete: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }],
+        isboss: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }]
       });
@@ -472,12 +500,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
           return ctx_r4.bakColor = $event;
-        })("itmedelete", function JPageComponent_j_itme_13_Template_j_itme_itmedelete_0_listener($event) {
+        })("isboss", function JPageComponent_j_itme_13_Template_j_itme_isboss_0_listener($event) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5);
 
           var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-          return ctx_r6.deletej($event);
+          return ctx_r6.boss($event);
+        })("itmedelete", function JPageComponent_j_itme_13_Template_j_itme_itmedelete_0_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5);
+
+          var ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          return ctx_r7.deletej($event);
         });
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -498,11 +532,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         {
           id: 1,
           name: "moshe",
-          color: "red"
+          color: "red",
+          isBossy: false
         }, {
           id: 2,
           name: "chaim",
-          color: "Azure"
+          color: "Azure",
+          isBossy: true
         }, {
           id: 3,
           name: "jiraff",
@@ -514,7 +550,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
           id: 5,
           name: "gogo",
-          color: "Orange"
+          color: "Orange",
+          isBossy: false
         }, {
           id: 6,
           name: "lavi",
@@ -530,7 +567,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
           id: 9,
           name: "jeron",
-          color: "DarkKhaki"
+          color: "DarkKhaki",
+          isBossy: false
         }, {
           id: 10,
           name: "golon",
@@ -538,11 +576,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
           id: 11,
           name: "leon",
-          color: "DarkOrange"
+          color: "DarkOrange",
+          isBossy: false
         }, {
           id: 12,
           name: "podel",
-          color: "DarkSalmon"
+          color: "DarkSalmon",
+          isBossy: false
         }];
       }
 
@@ -556,6 +596,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return id_j == j.id;
           });
           this.jiraffArr.splice(index, 1);
+        }
+      }, {
+        key: "boss",
+        value: function boss(id) {
+          for (var i = 0; i < this.jiraffArr.length; i++) {
+            if (this.jiraffArr[i].id == id) {
+              this.jiraffArr[i].isBossy = this.jiraffArr[i].isBossy ? false : true;
+            }
+          }
         }
       }]);
 
@@ -571,7 +620,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-j-page"]],
       decls: 14,
       vars: 5,
-      consts: [[4, "ngFor", "ngForOf"], [2, "display", "flex"], [1, "force=jitme"], [3, "jiraff", "clickcolor", "itmedelete", 4, "ngFor", "ngForOf"], [3, "jiraff", "clickcolor", "itmedelete"]],
+      consts: [[4, "ngFor", "ngForOf"], [2, "display", "flex"], [1, "force=jitme"], [3, "jiraff", "clickcolor", "isboss", "itmedelete", 4, "ngFor", "ngForOf"], [3, "jiraff", "clickcolor", "isboss", "itmedelete"]],
       template: function JPageComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");

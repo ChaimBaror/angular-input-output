@@ -1,9 +1,19 @@
 <p>j-itme works!</p>
 
-<div  style= "text-align: center ;border: coral 2px solid ;"[style.background]="this.bak" >
+<div 
+    [attr.jid]="jiraff.id"
+    [class]="'j-itme' + (jiraff.isBossy ? ' bossy' : '')"
+    [style.background]="this.bak" >
+
+    
+
+    
     <h2>{{jiraff.id}}</h2>
     <h3 >{{jiraff.name}}</h3>
-    <button #coloes (click)="clickItme(jiraff.color)" >{{jiraff.color}}</button>
+    <button #coloes (click)="clickItme(jiraff.color)" >this color : {{jiraff.color}}</button>
+    <button  (click)="clickboss(jiraff.id)" >is Bossy :  {{jiraff.isBossy}}</button>
     <br><br>
    <button (click)="clickDelete(jiraff.id)">delete</button>
 </div>
+
+

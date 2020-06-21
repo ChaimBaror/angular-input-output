@@ -10,8 +10,10 @@
     <ul class="force=jitme">
         <h1>this color new :<br> {{bakColor}}</h1>
         <li>
-        <j-itme *ngFor="let j of jiraffArr" [jiraff]="j" (clickcolor)="bakColor = $event"
-            (itmedelete)="deletej ($event)">
+        <j-itme *ngFor="let j of jiraffArr" [jiraff]="j" 
+        (clickcolor)="bakColor = $event"
+        (isboss)=boss($event)
+        (itmedelete)="deletej ($event)">
         </j-itme></li>
     </ul>
 

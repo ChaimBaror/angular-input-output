@@ -1,0 +1,15 @@
+
+
+ /* [class]="'j-itme' + (jiraff.isBossy ? 'bossy' : '')"
+ style= "text-align: center ;border: coral 2px solid ;" */
+
+ .j-itme{
+     text-align: center ;
+     border: coral 2px solid
+ }
+
+ .j-itme.bossy{
+    text-align: center ;
+    
+    border: coral 10px solid
+}
