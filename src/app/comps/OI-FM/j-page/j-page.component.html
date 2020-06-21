@@ -1,15 +1,19 @@
 <p>j-page works!</p>
 
-<h1>{{bakColor}}</h1>
+
 <h1>wellcom jiraff </h1>
 <ul>
     <li *ngFor="let j of jiraffArr">{{j.name}}</li>
 </ul>
 
-<div style="display: flex;" [style.background]="bakColor"></div>
-<ul class="force=jitme">
+<div style="display: flex;" [style.background]="bakColor">
+    <ul class="force=jitme">
+        <h1>this color new :<br> {{bakColor}}</h1>
+        <li>
+        <j-itme *ngFor="let j of jiraffArr" [jiraff]="j" (clickcolor)="bakColor = $event"
+            (itmedelete)="deletej ($event)">
+        </j-itme></li>
+    </ul>
 
-    <j-itme *ngFor="let j of jiraffArr" [jiraff]="j" (clickcolor)="bakColor = $event" >
-    </j-itme>
-</ul>
-
+   
+</div>

@@ -1,10 +1,9 @@
 <p>j-itme works!</p>
 
-<div style="border: coral 1px solid ;"[style.background]="this.bak" >
-    <h3 (click)="clickItme(jiraff.color)">{{jiraff.name}}</h3>
-    <label #coloes  >{{jiraff.color}}</label>
-    <span>{{jiraff.id}}</span>
-
-    <!-- <button (click)="clickItme(jiraff.color)">{{jiraff.color}}</button> -->
-
+<div  style= "text-align: center ;border: coral 2px solid ;"[style.background]="this.bak" >
+    <h2>{{jiraff.id}}</h2>
+    <h3 >{{jiraff.name}}</h3>
+    <button #coloes (click)="clickItme(jiraff.color)" >{{jiraff.color}}</button>
+    <br><br>
+   <button (click)="clickDelete(jiraff.id)">delete</button>
 </div>

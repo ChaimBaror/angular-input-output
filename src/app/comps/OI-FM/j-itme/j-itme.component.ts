@@ -13,10 +13,12 @@ export class JItmeComponent implements OnInit {
   @Input() jiraff:Jiraff
 
   @Output() clickcolor = new EventEmitter<string>()
+  @Output()  itmedelete = new EventEmitter<number>()
 
   ngOnInit(): void {
+    setTimeout(()=>{
     this.clickcolor.emit(this.jiraff.color);
-  }
+  },1000*this.jiraff.id)}
 
 
   clickItme(color){
@@ -25,4 +27,8 @@ export class JItmeComponent implements OnInit {
     
     this.clickcolor.emit(color);
   }
+  clickDelete(id){
+   this.itmedelete.emit(id)
+  }
+
 }
