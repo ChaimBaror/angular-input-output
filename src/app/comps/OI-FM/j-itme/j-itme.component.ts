@@ -21,6 +21,7 @@ export class JItmeComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(()=>{
     this.clickcolor.emit(this.jiraff.color);
+    this.bak=this.jiraff.color
   },1000*this.jiraff.id)}
 
 

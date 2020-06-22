@@ -278,6 +278,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           setTimeout(function () {
             _this.clickcolor.emit(_this.jiraff.color);
+
+            _this.bak = _this.jiraff.color;
           }, 1000 * this.jiraff.id);
         }
       }, {
@@ -317,7 +319,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         itmedelete: "itmedelete",
         isboss: "isboss"
       },
-      decls: 16,
+      decls: 17,
       vars: 9,
       consts: [[3, "click"], ["coloes", ""]],
       template: function JItmeComponent_Template(rf, ctx) {
@@ -352,27 +354,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "button", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " \xA0 ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function JItmeComponent_Template_button_click_10_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "button", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function JItmeComponent_Template_button_click_11_listener() {
             return ctx.clickboss(ctx.jiraff.id);
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "br");
-
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "br");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "button", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "br");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function JItmeComponent_Template_button_click_14_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "button", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function JItmeComponent_Template_button_click_15_listener() {
             return ctx.clickDelete(ctx.jiraff.id);
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "delete");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "delete");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -400,12 +404,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("this color : ", ctx.jiraff.color, "");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("is Bossy : ", ctx.jiraff.isBossy, "");
         }
       },
-      styles: [".j-itme[_ngcontent-%COMP%]{\r\n     text-align: center ;\r\n     border: coral 2px solid\r\n }\r\n\r\n .j-itme.bossy[_ngcontent-%COMP%]{\r\n    text-align: center ;\r\n    \r\n    border: coral 10px solid\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcHMvT0ktRk0vai1pdG1lL2otaXRtZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0NBRUM7eURBQ3dEOztDQUV4RDtLQUNJLG1CQUFtQjtLQUNuQjtDQUNKOztDQUVBO0lBQ0csbUJBQW1COztJQUVuQjtBQUNKIiwiZmlsZSI6InNyYy9hcHAvY29tcHMvT0ktRk0vai1pdG1lL2otaXRtZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcblxyXG4gLyogW2NsYXNzXT1cIidqLWl0bWUnICsgKGppcmFmZi5pc0Jvc3N5ID8gJ2Jvc3N5JyA6ICcnKVwiXHJcbiBzdHlsZT0gXCJ0ZXh0LWFsaWduOiBjZW50ZXIgO2JvcmRlcjogY29yYWwgMnB4IHNvbGlkIDtcIiAqL1xyXG5cclxuIC5qLWl0bWV7XHJcbiAgICAgdGV4dC1hbGlnbjogY2VudGVyIDtcclxuICAgICBib3JkZXI6IGNvcmFsIDJweCBzb2xpZFxyXG4gfVxyXG5cclxuIC5qLWl0bWUuYm9zc3l7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXIgO1xyXG4gICAgXHJcbiAgICBib3JkZXI6IGNvcmFsIDEwcHggc29saWRcclxufSJdfQ== */"]
+      styles: [".j-itme[_ngcontent-%COMP%]{\r\n     text-align: center ;\r\n     border: coral 2px solid\r\n }\r\n\r\n .j-itme.bossy[_ngcontent-%COMP%]{\r\n    text-align: center ;\r\n    \r\n    border: rgb(230, 217, 103) 10px solid\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcHMvT0ktRk0vai1pdG1lL2otaXRtZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0NBRUM7eURBQ3dEOztDQUV4RDtLQUNJLG1CQUFtQjtLQUNuQjtDQUNKOztDQUVBO0lBQ0csbUJBQW1COztJQUVuQjtBQUNKIiwiZmlsZSI6InNyYy9hcHAvY29tcHMvT0ktRk0vai1pdG1lL2otaXRtZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcblxyXG4gLyogW2NsYXNzXT1cIidqLWl0bWUnICsgKGppcmFmZi5pc0Jvc3N5ID8gJ2Jvc3N5JyA6ICcnKVwiXHJcbiBzdHlsZT0gXCJ0ZXh0LWFsaWduOiBjZW50ZXIgO2JvcmRlcjogY29yYWwgMnB4IHNvbGlkIDtcIiAqL1xyXG5cclxuIC5qLWl0bWV7XHJcbiAgICAgdGV4dC1hbGlnbjogY2VudGVyIDtcclxuICAgICBib3JkZXI6IGNvcmFsIDJweCBzb2xpZFxyXG4gfVxyXG5cclxuIC5qLWl0bWUuYm9zc3l7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXIgO1xyXG4gICAgXHJcbiAgICBib3JkZXI6IHJnYigyMzAsIDIxNywgMTAzKSAxMHB4IHNvbGlkXHJcbn0iXX0= */"]
     });
     /*@__PURE__*/
 
@@ -488,25 +492,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function JPageComponent_j_itme_13_Template(rf, ctx) {
+    function JPageComponent_j_itme_12_Template(rf, ctx) {
       if (rf & 1) {
         var _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "j-itme", 4);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickcolor", function JPageComponent_j_itme_13_Template_j_itme_clickcolor_0_listener($event) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickcolor", function JPageComponent_j_itme_12_Template_j_itme_clickcolor_0_listener($event) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5);
 
           var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
           return ctx_r4.bakColor = $event;
-        })("isboss", function JPageComponent_j_itme_13_Template_j_itme_isboss_0_listener($event) {
+        })("isboss", function JPageComponent_j_itme_12_Template_j_itme_isboss_0_listener($event) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5);
 
           var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
           return ctx_r6.boss($event);
-        })("itmedelete", function JPageComponent_j_itme_13_Template_j_itme_itmedelete_0_listener($event) {
+        })("itmedelete", function JPageComponent_j_itme_12_Template_j_itme_itmedelete_0_listener($event) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5);
 
           var ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -618,9 +622,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     JPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: JPageComponent,
       selectors: [["app-j-page"]],
-      decls: 14,
+      decls: 13,
       vars: 5,
-      consts: [[4, "ngFor", "ngForOf"], [2, "display", "flex"], [1, "force=jitme"], [3, "jiraff", "clickcolor", "isboss", "itmedelete", 4, "ngFor", "ngForOf"], [3, "jiraff", "clickcolor", "isboss", "itmedelete"]],
+      consts: [[4, "ngFor", "ngForOf"], [2, "display", "flex"], [1, "force=jitme"], ["class", " j-item-as-list", 3, "jiraff", "clickcolor", "isboss", "itmedelete", 4, "ngFor", "ngForOf"], [1, "j-item-as-list", 3, "jiraff", "clickcolor", "isboss", "itmedelete"]],
       template: function JPageComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
@@ -655,11 +659,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "li");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, JPageComponent_j_itme_13_Template, 1, 1, "j-itme", 3);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, JPageComponent_j_itme_12_Template, 1, 1, "j-itme", 3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -679,7 +679,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx.bakColor, "");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.jiraffArr);
         }
