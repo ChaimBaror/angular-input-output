@@ -2,9 +2,7 @@
 
 
 <h1>wellcom jiraff </h1>
-<ul>
-    <li *ngFor="let j of jiraffArr">{{j.name}}</li>
-</ul>
+
 
 <div style="display: flex;" [style.background]="bakColor">
     <ul class="force=jitme">
@@ -14,10 +12,17 @@
         [jiraff]="j" 
         class=" j-item-as-list"
         (clickcolor)="bakColor = $event"
+
+        (detelItnefm)="detelfm = $event"
+
         (isboss)=boss($event)
         (itmedelete)="deletej ($event)">
         </j-itme>
     </ul>
-
-   
+    <!-- <ul>
+        <li *ngFor="let j of jiraffArr">{{j.name}}</li>
+    </ul> -->
+<ul>
+    <j-detels [detel_j] ="detelfm" ></j-detels>
+   </ul>
 </div>

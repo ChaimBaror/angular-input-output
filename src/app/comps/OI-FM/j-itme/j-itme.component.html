@@ -3,9 +3,8 @@
 <div 
     [attr.jid]="jiraff.id"
     [class]="'j-itme' + (jiraff.isBossy ? ' bossy' : '')"
-    [style.background]="this.bak" >
-
-    
+    [style.background]="this.bak"
+    (dblclick)=detelItne(jiraff) >
 
     
     <h2>{{jiraff.id}}</h2>

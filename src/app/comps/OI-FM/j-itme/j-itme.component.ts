@@ -17,14 +17,20 @@ export class JItmeComponent implements OnInit {
   @Output() clickcolor = new EventEmitter<string>()
   @Output()  itmedelete = new EventEmitter<number>()
   @Output()  isboss = new EventEmitter<number>()
+  @Output()  detelItnefm = new EventEmitter<Jiraff>()
 
   ngOnInit(): void {
-    setTimeout(()=>{
+    setInterval(()=>{
     this.clickcolor.emit(this.jiraff.color);
     this.bak=this.jiraff.color
-  },1000*this.jiraff.id)}
+  },2000*this.jiraff.id)}
 
-
+  
+  detelItne(j){
+    console.log("what is click :"+ j);
+    
+    this.detelItnefm.emit(j)
+  }
 
   clickItme(color){
     console.log(color);

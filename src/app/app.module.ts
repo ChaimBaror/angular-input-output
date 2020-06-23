@@ -8,6 +8,7 @@ import { ChlidFnComponent } from './comps/chlid-fn/chlid-fn.component';
 import { ParentFnComponent } from './comps/parent-fn/parent-fn.component';
 import { JItmeComponent } from './comps/OI-FM/j-itme/j-itme.component';
 import { JPageComponent } from './comps/OI-FM/j-page/j-page.component';
+import { JDetelsComponent } from './comps/OI-FM/j-detels/j-detels.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { JPageComponent } from './comps/OI-FM/j-page/j-page.component';
     ChlidFnComponent,
     ParentFnComponent,
     JItmeComponent,
-    JPageComponent
+    JPageComponent,
+    JDetelsComponent
   ],
   imports: [
     BrowserModule

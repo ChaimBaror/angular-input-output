@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JPageComponent implements OnInit {
 
-
+  detelfm : Jiraff
   bakColor: string
   constructor() { }
 
@@ -37,14 +37,14 @@ export class JPageComponent implements OnInit {
     { id: 2, name: "chaim", color: "Azure", isBossy: true },
     { id: 3, name: "jiraff", color: "blue" },
     { id: 4, name: "jojo", color: "BlueViolet" },
-    { id: 5, name: "gogo", color: "Orange", isBossy: false },
+    { id: 5, name: "gogo", color: "GreenYellow", isBossy: false },
     { id: 6, name: "lavi", color: "Beige" },
     { id: 7, name: "talger", color: "Coral" },
     { id: 8, name: "beroch", color: "DarkGray" },
     { id: 9, name: "jeron", color: "DarkKhaki", isBossy: false },
     { id: 10, name: "golon", color: "DarkSeaGreen" },
     { id: 11, name: "leon", color: "DarkOrange", isBossy: false },
-    { id: 12, name: "podel", color: "DarkSalmon", isBossy: false }
+    { id: 12, name: "podel", color: "Gold", isBossy: false }
   ]
 }
 
