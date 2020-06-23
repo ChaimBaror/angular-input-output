@@ -1,3 +1,7 @@
+.contener{
+    margin: 10%;
+}
+
 .j-item-as-list{
     display: list-item;
 }
