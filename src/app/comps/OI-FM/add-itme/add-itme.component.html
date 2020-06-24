@@ -1,0 +1,15 @@
+<p>add-itme works!</p>
+
+<button #butt>add</button>
+
+<div class="adding">
+    <label>Add an name: <input type="text" #newItem></label><br><br>
+    <label>Add an id : <input type="number" #newItemid></label> <br><br>
+    <label>Add an color: <input type="color" #newItemColor></label><br><br>
+    <label>Add an isBossy:<input type="checkbox" #newItemBoss></label><br><br>
+    <br>
+   
+    <button (click)="addNewItem(newItem.value,newItemid.value,newItemColor.value,newItemBoss.value) ">Add to parent's list</button>
+
+
+</div>

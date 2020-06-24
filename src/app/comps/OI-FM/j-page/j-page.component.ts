@@ -28,6 +28,9 @@ export class JPageComponent implements OnInit {
     }
   }
 
+  add(itme){
+    this.jiraffArr.push(itme)
+  }
 
 
 

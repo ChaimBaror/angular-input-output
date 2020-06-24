@@ -16,8 +16,15 @@
         <!-- <ul>
         <li *ngFor="let j of jiraffArr">{{j.name}}</li>
     </ul> -->
+<div>
+        <ul>
+            <add-itme (newItemEvent)="add($event)"></add-itme>
+        </ul>
+
         <ul>
             <j-detels [detel_j]="detelfm"></j-detels>
         </ul>
+</div>
+
     </div>
 </div>

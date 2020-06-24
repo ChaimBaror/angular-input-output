@@ -9,6 +9,7 @@ import { ParentFnComponent } from './comps/parent-fn/parent-fn.component';
 import { JItmeComponent } from './comps/OI-FM/j-itme/j-itme.component';
 import { JPageComponent } from './comps/OI-FM/j-page/j-page.component';
 import { JDetelsComponent } from './comps/OI-FM/j-detels/j-detels.component';
+import { AddItmeComponent } from './comps/OI-FM/add-itme/add-itme.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { JDetelsComponent } from './comps/OI-FM/j-detels/j-detels.component';
     ParentFnComponent,
     JItmeComponent,
     JPageComponent,
-    JDetelsComponent
+    JDetelsComponent,
+    AddItmeComponent
   ],
   imports: [
     BrowserModule
